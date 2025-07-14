@@ -28,20 +28,21 @@ TestlyHub is a clean, modern marketplace for MCQ practice tests, allowing users 
 - Leaderboard with test filtering
 
 ### Screenshot
-![Home Page](../client/public/images/HomePage.png)
-![Login Page](../client/public/images/LoginPage.png)
-![Register Page](../client/public/images/RegisterPage.png)
-![CreateTest-InputBased Page](../client/public/images/CreateTestPage-InputBased.png)
-![CreateTest-MCQBased Page](../client/public/images/CreateTestPage-MCQBased.png)
-![LeaderBoardPage Page](../client/public/images/LeaderBoardPage.png)
-![profile Page](../client/public/images/ProfilePage.png)
+![Home Page](public/images/HomePage.png)
+![Login Page](public/images/LoginPage.png)
+![Register Page](public/images/RegisterPage.png)
+![CreateTest-InputBased Page](public/images/CreateTestPage-InputBased.png)
+![CreateTest-MCQBased Page](public/images/CreateTestPage-MCQBased.png)
+![LeaderBoardPage Page](public/images/LeaderBoardPage.png)
+![profile Page](public/images/ProfilePage.png)
 
 ### Links
-- [Live Site](https://your-testlihub-frontend.vercel.app)
+- [Live Site](https://testlyhub-frontend.vercel.app/)
 - [GitHub Repository](https://github.com/shrikanth-dev/testlyhub-frontend)
+- [Back-end GitHub Repository](https://github.com/shrikanth-dev/testlyhub-backend)
 
 ### Built with
-- React (Vite-powered)
+- React
 - React Router DOM
 - Axios
 - Custom CSS Modules
