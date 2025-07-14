@@ -24,13 +24,13 @@ const QuizPlayer = () => {
           return;
         }
 
-        const res = await axios.get(`http://localhost:5000/api/tests/${id}`, {
+        const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tests/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const testData = res.data;
 
         if (testData.price > 0) {
-          const purchaseRes = await axios.get(`http://localhost:5000/api/purchase/check/${id}`, {
+          const purchaseRes = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/purchase/check/${id}`, {
             headers: { Authorization: `Bearer ${token}` },
           });
           if (!purchaseRes.data.purchased) {
@@ -84,7 +84,7 @@ const QuizPlayer = () => {
     try {
       const token = localStorage.getItem('token');
       const timeSpent = test.duration * 60 - timeLeft;
-      await axios.post('http://localhost:5000/api/leaderboard/submit', {
+        await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/leaderboard/submit`, {
         testId: test.id,
         score: correct,
         time_taken: timeSpent,

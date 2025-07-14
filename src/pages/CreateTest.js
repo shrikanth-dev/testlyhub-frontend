@@ -62,9 +62,7 @@ const CreateTest = () => {
         solutionsArray = solutionsText.split('\n').map(s => s.trim()).filter(Boolean);
       }
 
-      await axios.post(
-        'http://localhost:5000/api/tests/create',
-        {
+await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/tests/create`, {
           title: formData.title,
           description: formData.description,
           questions: questionsArray,

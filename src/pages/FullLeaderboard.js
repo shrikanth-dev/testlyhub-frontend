@@ -12,7 +12,7 @@ const FullLeaderboard = () => {
   useEffect(() => {
     const fetchTests = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/tests');
+        const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tests`);
         setTests(res.data);
       } catch (err) {
         console.error('Error loading tests:', err);
@@ -27,7 +27,8 @@ const FullLeaderboard = () => {
     const fetchLeaderboard = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(`http://localhost:5000/api/leaderboard/${selectedTest}`);
+        const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/leaderboard/${selectedTest}`);
+
         setLeaderboard(res.data);
       } catch (error) {
         console.error('Failed to load leaderboard:', error);

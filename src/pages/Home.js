@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     const fetchTests = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/tests');
+        const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tests`);
         setTests(res.data);
       } catch (err) {
         console.error('Failed to fetch tests:', err);
@@ -26,8 +26,7 @@ const Home = () => {
       return;
     }
     try {
-      const res = await axios.post(
-        'http://localhost:5000/api/creator/become',
+        const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/creator/become`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -49,8 +48,7 @@ const Home = () => {
       return;
     }
     try {
-      await axios.post(
-        'http://localhost:5000/api/purchase',
+        await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/purchase`,
         { testId, amount: price },
         { headers: { Authorization: `Bearer ${token}` } }
       );

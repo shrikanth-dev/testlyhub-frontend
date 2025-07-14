@@ -14,12 +14,12 @@ const Profile = () => {
       if (!token) return navigate('/login');
 
       try {
-        const userRes = await axios.get('http://localhost:5000/api/auth/me', {
+        const userRes = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/auth/me`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUser(userRes.data);
 
-        const attemptsRes = await axios.get('http://localhost:5000/api/leaderboard/user', {
+        const attemptsRes = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/leaderboard/user`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setAttempts(attemptsRes.data);

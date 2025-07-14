@@ -10,7 +10,7 @@ const LeaderboardPage = () => {
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/leaderboard/${testId}`);
+        const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/leaderboard/${testId}`);
         setEntries(res.data);
       } catch (error) {
         console.error('Failed to load leaderboard:', error);
