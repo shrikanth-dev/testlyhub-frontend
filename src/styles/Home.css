@@ -1,0 +1,96 @@
+/* Home.css */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.test-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.test-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.test-card h3 {
+  margin: 0.2rem 0;
+  color: #007bff;
+}
+
+.test-card p {
+  margin: 0.2rem 0;
+}
+
+.test-actions {
+  margin-top: 0.5rem;
+}
+
+.test-actions button,
+.test-actions a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  text-decoration: none;
+}
+
+.test-actions a {
+  background-color: #28a745;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.test-actions a:hover {
+  background-color: #1e7e34;
+}
+
+@media (max-width: 600px) {
+  .test-card {
+    padding: 0.8rem;
+  }
+}
